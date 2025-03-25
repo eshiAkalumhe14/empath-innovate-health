@@ -1,20 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
+
+
 .App {
   text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 20vmin;
   pointer-events: none;
+  animation: heart_pulse 2s infinite;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App-title {
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
+
+.App-tagline {
+  font-family: 'Karla', sans-serif;
+  font-size: 1.5rem;
+  margin-top: 0;
+}
+
+.coloured-text {
+  color: #db9bf1;
+}
+
 
 .App-header {
-  background-color: #282c34;
+  background-color: #26124f;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -24,10 +41,45 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+@keyframes slideUpFade {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
 }
 
+.slide-up {
+  animation: slideUpFade 1s forwards;
+}
+
+@keyframes heart_pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+  
+}
+
+/* .App-link {
+  color: #61dafb;
+} */
+
+
+
+/* @media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,4 +87,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
